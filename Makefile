@@ -25,14 +25,14 @@ OBJS     = ${SRCS:.c=.o}
 # targets
 ####################
 
-all: clean libembedocd.a 
+all: clean libemocd.a 
 
 clean:
-	rm -f $(OBJS) libemedocd.a
+	rm -f $(OBJS) libemocd.a
 
 %.o: %.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
-libembedocd.a: $(OBJS)
+libemocd.a: $(OBJS)
 	$(AR) crv $@ $^
 
